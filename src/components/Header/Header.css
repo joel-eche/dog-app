@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding-left: 10px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.header__brand {
+  margin-left: 10px;
+}

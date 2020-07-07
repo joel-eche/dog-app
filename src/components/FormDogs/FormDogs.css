@@ -1,0 +1,7 @@
+.form__select-breed, .form__input-breed {
+  width: 100%;
+  max-width: 50%;
+  padding-left: 8px;
+  border: 1px solid gray;
+  height: 40px;
+}
