@@ -6,7 +6,7 @@ To build this application we use Dog API (thank you so much!), you can found it 
 - Clone this repo :3
 - Install dependences
 Run `yarn install` or `npm install`
-- Enjoy it! (Running `yarn start` or `npm run start `)
+- Run the project with `yarn start` or `npm run start `
 
 ### Screenshots
 
