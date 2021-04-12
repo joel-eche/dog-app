@@ -8,7 +8,14 @@ stages:
 install:
   stage: setup
   script:
-    - npm install
+    - npm 
+  artifacts:
+    name: "artifacts"
+    untracked: true
+    expire_in: 60 mins
+    paths:
+      - .npm/
+      - node_modules/
 
 unit-test:
   stage: test
