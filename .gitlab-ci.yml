@@ -1,0 +1,16 @@
+image: node:14
+
+stages:
+  - setup
+  - test
+
+
+install:
+  stage: setup
+  script:
+    - npm install
+
+unit-test:
+  stage: test
+  script:
+    -npm run test
