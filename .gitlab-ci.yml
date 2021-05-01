@@ -9,7 +9,6 @@ install:
   script:
     - npm install
   artifacts:
-    untracked: true
     expire_in: 60 mins
     paths:
       - .npm/
