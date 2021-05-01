@@ -13,10 +13,12 @@ install:
     paths:
       - .npm/
       - node_modules/
+      - hello-world/
 
 unit-test:
   stage: test
   script:
+    - ls
     - npm run test
   dependencies:
     - install
