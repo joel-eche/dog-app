@@ -13,8 +13,6 @@ install:
     expire_in: 60 mins
     paths:
       - .npm/
-      - node_modules/
-      - hello-world/
 
 unit-test:
   stage: test
