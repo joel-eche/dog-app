@@ -17,3 +17,12 @@ unit-test:
   stage: test
   script:
     - npm run test
+
+build:
+  stage: unit-test
+  script:
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - build/
