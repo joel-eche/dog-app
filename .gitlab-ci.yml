@@ -17,5 +17,3 @@ unit-test:
   stage: test
   script:
     - npm run test
-  dependencies:
-    - install
