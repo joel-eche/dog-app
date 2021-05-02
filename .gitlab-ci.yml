@@ -3,6 +3,7 @@ image: node:14
 stages:
   - setup
   - test
+  - build
 
 install:
   stage: setup
@@ -19,10 +20,20 @@ unit-test:
     - npm run test
 
 build:
-  stage: unit-test
+  stage: build
   script:
     - yarn install
     - yarn build
   artifacts:
     paths:
       - build/
+
+pages:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - mv build public
+  artifacts:
+    paths:
+      - public
