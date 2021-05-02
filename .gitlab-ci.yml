@@ -9,10 +9,8 @@ install:
   script:
     - npm install
   artifacts:
-    untracked: false
     expire_in: 60 mins
     paths:
-      - .npm/
       - node_modules/
 
 unit-test:
