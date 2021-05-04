@@ -1,0 +1,40 @@
+image: node:14
+
+stages:
+  - setup
+  - test
+  - build
+  - deploy
+
+install:
+  stage: setup
+  script:
+    - npm install
+  artifacts:
+    expire_in: 60 mins
+    paths:
+      - node_modules/
+
+unit-test:
+  stage: test
+  script:
+    - npm run test
+
+build:
+  stage: build
+  script:
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+
+pages:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - mv build public
+  artifacts:
+    paths:
+      - public
